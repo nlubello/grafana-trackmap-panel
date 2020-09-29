@@ -14,7 +14,7 @@ function log(msg) {
 }
 
 export class TrackMapCtrl extends MetricsPanelCtrl {
-  constructor($scope, $injector) {
+  constructor($scope, $injector, annotationsSrv) {
     super($scope, $injector);
 
     log("constructor");
@@ -50,7 +50,7 @@ export class TrackMapCtrl extends MetricsPanelCtrl {
       })
     };
 
-    this.timeSrv = $injector.get('timeSrv');
+    //this.timeSrv = $injector.get('timeSrv');
     this.coords = [];
     this.leafMap = null;
     this.layerChanger = null;
